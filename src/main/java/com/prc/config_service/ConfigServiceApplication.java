@@ -10,13 +10,11 @@ import org.springframework.context.ApplicationContext;
 @EnableConfigServer
 public class ConfigServiceApplication {
 
-    @Value("${myapp.name}")
-    private String name;
+
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(ConfigServiceApplication.class, args);
-        ConfigServiceApplication app = context.getBean(ConfigServiceApplication.class);
-        System.out.println(app.name);  // ✅ prints the value
+        SpringApplication.run(ConfigServiceApplication.class, args);
+
     }
 
 }
